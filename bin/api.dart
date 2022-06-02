@@ -57,7 +57,7 @@ class API {
     await selectedBox.close();
   }
 
-  connectByHour(String country, String region) async {
+  Map<String, String> connectByHour(String country, String region) async {
     var response = await http.get(
         Uri.parse('https://world-weather.ru/pogoda/$country/$region/24hours/'));
     if (response.statusCode == 200) {
